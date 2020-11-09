@@ -1,0 +1,442 @@
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~$ mkdir HegedusBarbi
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~$ cd HegedusBarbi/
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~/HegedusBarbi$ cd ..
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~$ cd HegedusBarbi/
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~/HegedusBarbi$ mkdir szakasszaro
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~/HegedusBarbi$ cd szakasszaro/
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~/HegedusBarbi/szakasszaro$ touch szakaszzaro_feladat
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~/HegedusBarbi/szakasszaro$ nano szakaszzaro_feladat 
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~/HegedusBarbi/szakasszaro$ ls
+szakaszzaro_feladat  szakaszzaro_feladat.txt
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~/HegedusBarbi/szakasszaro$ echo "Hello" > szakaszzaro_feladat
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~/HegedusBarbi/szakasszaro$ nano szakaszzaro_feladat
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~/HegedusBarbi/szakasszaro$ mv szakaszzaro_feladat feladat
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~/HegedusBarbi/szakasszaro$ ls
+feladat  szakaszzaro_feladat.txt
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~/HegedusBarbi/szakasszaro$ rm -r szakaszzaro_feladat.txt 
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~/HegedusBarbi/szakasszaro$ ls
+feladat
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~/HegedusBarbi/szakasszaro$ cp feladat feladat2
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~/HegedusBarbi/szakasszaro$ ls
+feladat  feladat2
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~/HegedusBarbi/szakasszaro$ rm -r feladat2
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~/HegedusBarbi/szakasszaro$ ls
+feladat
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~/HegedusBarbi/szakasszaro$ cat feladat 
+Hello
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~/HegedusBarbi/szakasszaro$ cat /var/log/syslog 
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~/HegedusBarbi/szakasszaro$ cd /var/log/syslog
+bash: cd: /var/log/syslog: Not a directory
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~/HegedusBarbi/szakasszaro$ grep "NetworkManager" /var/log/syslog | cat >> feladat
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~/HegedusBarbi/szakasszaro$ ls
+feladat
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~/HegedusBarbi/szakasszaro$ cat feladat
+Hello
+Nov  9 08:59:59 hbarbi-HP-Pavilion-15-Notebook-PC kernel: [   24.004733] audit: type=1400 audit(1604908791.742:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=664 comm="apparmor_parser"
+Nov  9 08:59:59 hbarbi-HP-Pavilion-15-Notebook-PC kernel: [   24.004737] audit: type=1400 audit(1604908791.742:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-helper" pid=664 comm="apparmor_parser"
+Nov  9 09:00:06 hbarbi-HP-Pavilion-15-Notebook-PC dbus-daemon[701]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.17' (uid=0 pid=702 comm="/usr/sbin/NetworkManager --no-daemon " label="unconfined")
+Nov  9 09:00:11 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908803.3888] NetworkManager (version 1.22.10) is starting... (for the first time)
+Nov  9 09:00:11 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908803.3889] Read config: /etc/NetworkManager/NetworkManager.conf (lib: 10-dns-resolved.conf, 20-connectivity-ubuntu.conf, no-mac-addr-change.conf) (run: 10-globally-managed-devices.conf) (etc: default-wifi-powersave-on.conf)
+Nov  9 09:00:11 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908803.4705] bus-manager: acquired D-Bus service "org.freedesktop.NetworkManager"
+Nov  9 09:00:11 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908803.8699] manager[0x55fd0a02e020]: monitoring kernel firmware directory '/lib/firmware'.
+Nov  9 09:00:11 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908803.8700] monitoring ifupdown state file '/run/network/ifstate'.
+Nov  9 09:00:11 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908803.9961] hostname: hostname: using hostnamed
+Nov  9 09:00:11 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908803.9962] hostname: hostname changed from (none) to "hbarbi-HP-Pavilion-15-Notebook-PC"
+Nov  9 09:00:11 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908803.9969] dns-mgr[0x55fd0a018290]: init: dns=systemd-resolved rc-manager=symlink, plugin=systemd-resolved
+Nov  9 09:00:11 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908803.9995] rfkill0: found Wi-Fi radio killswitch (at /sys/devices/pci0000:00/0000:00:1c.2/0000:08:00.0/ieee80211/phy0/rfkill0) (driver wl)
+Nov  9 09:00:11 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908804.0004] rfkill1: found Wi-Fi radio killswitch (at /sys/devices/pci0000:00/0000:00:1c.2/0000:08:00.0/net/wlo1/rfkill1) (driver wl)
+Nov  9 09:00:11 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908804.0016] manager[0x55fd0a02e020]: rfkill: Wi-Fi hardware radio set enabled
+Nov  9 09:00:11 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908804.0017] manager[0x55fd0a02e020]: rfkill: WWAN hardware radio set enabled
+Nov  9 09:00:11 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908804.6511] Loaded device plugin: NMWwanFactory (/usr/lib/x86_64-linux-gnu/NetworkManager/1.22.10/libnm-device-plugin-wwan.so)
+Nov  9 09:00:11 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908804.8264] Loaded device plugin: NMWifiFactory (/usr/lib/x86_64-linux-gnu/NetworkManager/1.22.10/libnm-device-plugin-wifi.so)
+Nov  9 09:00:11 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908804.8273] Loaded device plugin: NMAtmManager (/usr/lib/x86_64-linux-gnu/NetworkManager/1.22.10/libnm-device-plugin-adsl.so)
+Nov  9 09:00:11 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908805.2350] Loaded device plugin: NMTeamFactory (/usr/lib/x86_64-linux-gnu/NetworkManager/1.22.10/libnm-device-plugin-team.so)
+Nov  9 09:00:11 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908806.0576] Loaded device plugin: NMBluezManager (/usr/lib/x86_64-linux-gnu/NetworkManager/1.22.10/libnm-device-plugin-bluetooth.so)
+Nov  9 09:00:11 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908806.0581] manager: rfkill: Wi-Fi enabled by radio killswitch; enabled by state file
+Nov  9 09:00:11 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908806.0583] manager: rfkill: WWAN enabled by radio killswitch; enabled by state file
+Nov  9 09:00:11 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908806.0585] manager: Networking is enabled by state file
+Nov  9 09:00:11 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908806.0587] dhcp-init: Using DHCP client 'internal'
+Nov  9 09:00:11 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908806.2560] settings: Loaded settings plugin: ifupdown ("/usr/lib/x86_64-linux-gnu/NetworkManager/1.22.10/libnm-settings-plugin-ifupdown.so")
+Nov  9 09:00:11 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908806.2561] settings: Loaded settings plugin: keyfile (internal)
+Nov  9 09:00:11 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908806.2562] ifupdown: management mode: unmanaged
+Nov  9 09:00:11 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <warn>  [1604908806.3148] ifupdown: interfaces file /etc/network/interfaces doesn't exist
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908806.8428] device (lo): carrier: link connected
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908806.8435] manager: (lo): new Generic device (/org/freedesktop/NetworkManager/Devices/1)
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908806.8475] manager: (eno1): new Ethernet device (/org/freedesktop/NetworkManager/Devices/2)
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908806.9323] settings: (eno1): created default wired connection 'Wired connection 1'
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908807.2432] device (eno1): state change: unmanaged -> unavailable (reason 'managed', sys-iface-state: 'external')
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908807.5700] manager: (wlo1): new 802.11 Wi-Fi device (/org/freedesktop/NetworkManager/Devices/3)
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908807.5725] device (wlo1): state change: unmanaged -> unavailable (reason 'managed', sys-iface-state: 'external')
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <warn>  [1604908807.8948] Error: failed to open /run/network/ifstate
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908808.0839] supplicant: wpa_supplicant running
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908808.0841] device (wlo1): supplicant interface state: init -> starting
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908808.3560] sup-iface[0x55fd0a040900,wlo1]: supports 1 scan SSIDs
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908808.3570] device (wlo1): supplicant interface state: starting -> ready
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908808.3571] device (wlo1): state change: unavailable -> disconnected (reason 'supplicant-available', sys-iface-state: 'managed')
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908808.6816] modem-manager: ModemManager not available
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908808.7218] modem-manager: ModemManager now available
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908809.5341] policy: auto-activating connection 'FLOW academy' (94324112-aaff-4fc9-8b6f-562bd9fdd850)
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908809.5351] device (wlo1): Activation: starting connection 'FLOW academy' (94324112-aaff-4fc9-8b6f-562bd9fdd850)
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908809.5353] device (wlo1): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908809.5360] manager: NetworkManager state is now CONNECTING
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908809.5366] device (wlo1): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908809.5373] device (wlo1): Activation: (wifi) access point 'FLOW academy' has security, but secrets are required.
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908809.5373] device (wlo1): state change: config -> need-auth (reason 'none', sys-iface-state: 'managed')
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908809.5418] device (wlo1): state change: need-auth -> prepare (reason 'none', sys-iface-state: 'managed')
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908809.5424] device (wlo1): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908809.5429] device (wlo1): Activation: (wifi) connection 'FLOW academy' has security, and secrets exist.  No new secrets needed.
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908809.5432] Config: added 'ssid' value 'FLOW academy'
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908809.5432] Config: added 'scan_ssid' value '1'
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908809.5432] Config: added 'bgscan' value 'simple:30:-70:86400'
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908809.5432] Config: added 'key_mgmt' value 'WPA-PSK WPA-PSK-SHA256'
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908809.5432] Config: added 'auth_alg' value 'OPEN'
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908809.5433] Config: added 'psk' value '<hidden>'
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908809.5653] device (wlo1): supplicant interface state: ready -> associating
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908809.7141] device (wlo1): supplicant interface state: associating -> 4-way handshake
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908809.7174] device (wlo1): supplicant interface state: 4-way handshake -> completed
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908809.7175] device (wlo1): Activation: (wifi) Stage 2 of 5 (Device Configure) successful. Connected to wireless network "FLOW academy"
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908809.7177] device (wlo1): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908809.7184] dhcp4 (wlo1): activation: beginning transaction (timeout in 45 seconds)
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0424] dhcp4 (wlo1): option dhcp_lease_time      => '600'
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0425] dhcp4 (wlo1): option domain_name_servers  => '192.168.0.1'
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0425] dhcp4 (wlo1): option expiry               => '1604909409'
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0426] dhcp4 (wlo1): option ip_address           => '192.168.5.87'
+Nov  9 09:00:12 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0426] dhcp4 (wlo1): option next_server          => '192.168.5.1'
+Nov  9 09:00:13 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0426] dhcp4 (wlo1): option requested_broadcast_address => '1'
+Nov  9 09:00:13 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0426] dhcp4 (wlo1): option requested_domain_name => '1'
+Nov  9 09:00:13 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0426] dhcp4 (wlo1): option requested_domain_name_servers => '1'
+Nov  9 09:00:13 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0427] dhcp4 (wlo1): option requested_domain_search => '1'
+Nov  9 09:00:13 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0427] dhcp4 (wlo1): option requested_host_name  => '1'
+Nov  9 09:00:13 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0427] dhcp4 (wlo1): option requested_interface_mtu => '1'
+Nov  9 09:00:13 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0427] dhcp4 (wlo1): option requested_ms_classless_static_routes => '1'
+Nov  9 09:00:13 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0427] dhcp4 (wlo1): option requested_nis_domain => '1'
+Nov  9 09:00:13 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0428] dhcp4 (wlo1): option requested_nis_servers => '1'
+Nov  9 09:00:13 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0428] dhcp4 (wlo1): option requested_ntp_servers => '1'
+Nov  9 09:00:13 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0428] dhcp4 (wlo1): option requested_rfc3442_classless_static_routes => '1'
+Nov  9 09:00:13 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0428] dhcp4 (wlo1): option requested_root_path  => '1'
+Nov  9 09:00:14 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0428] dhcp4 (wlo1): option requested_routers    => '1'
+Nov  9 09:00:14 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0429] dhcp4 (wlo1): option requested_static_routes => '1'
+Nov  9 09:00:14 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0429] dhcp4 (wlo1): option requested_subnet_mask => '1'
+Nov  9 09:00:14 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0430] dhcp4 (wlo1): option requested_time_offset => '1'
+Nov  9 09:00:14 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0430] dhcp4 (wlo1): option requested_wpad       => '1'
+Nov  9 09:00:14 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0430] dhcp4 (wlo1): option routers              => '192.168.5.1'
+Nov  9 09:00:14 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0430] dhcp4 (wlo1): option subnet_mask          => '255.255.255.0'
+Nov  9 09:00:14 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0430] dhcp4 (wlo1): state changed unknown -> bound
+Nov  9 09:00:14 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0470] device (wlo1): state change: ip-config -> ip-check (reason 'none', sys-iface-state: 'managed')
+Nov  9 09:00:14 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0986] device (wlo1): state change: ip-check -> secondaries (reason 'none', sys-iface-state: 'managed')
+Nov  9 09:00:14 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0990] device (wlo1): state change: secondaries -> activated (reason 'none', sys-iface-state: 'managed')
+Nov  9 09:00:14 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.0999] manager: NetworkManager state is now CONNECTED_LOCAL
+Nov  9 09:00:14 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.1025] manager: NetworkManager state is now CONNECTED_SITE
+Nov  9 09:00:14 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.1027] policy: set 'FLOW academy' (wlo1) as default for IPv4 routing and DNS
+Nov  9 09:00:14 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908810.1036] device (wlo1): Activation: successful, device activated.
+Nov  9 09:00:15 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908811.6700] manager: NetworkManager state is now CONNECTED_GLOBAL
+Nov  9 09:00:15 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908813.5646] manager: startup complete
+Nov  9 09:00:16 hbarbi-HP-Pavilion-15-Notebook-PC whoopsie[946]: [09:00:16] The default IPv4 route is: /org/freedesktop/NetworkManager/ActiveConnection/1
+Nov  9 09:00:16 hbarbi-HP-Pavilion-15-Notebook-PC whoopsie[946]: [09:00:16] Not a paid data plan: /org/freedesktop/NetworkManager/ActiveConnection/1
+Nov  9 09:00:16 hbarbi-HP-Pavilion-15-Notebook-PC whoopsie[946]: [09:00:16] Found usable connection: /org/freedesktop/NetworkManager/ActiveConnection/1
+Nov  9 09:00:21 hbarbi-HP-Pavilion-15-Notebook-PC systemd[1]: NetworkManager-dispatcher.service: Succeeded.
+Nov  9 09:00:31 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908831.7471] manager: NetworkManager state is now CONNECTED_SITE
+Nov  9 09:00:31 hbarbi-HP-Pavilion-15-Notebook-PC dbus-daemon[701]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.17' (uid=0 pid=702 comm="/usr/sbin/NetworkManager --no-daemon " label="unconfined")
+Nov  9 09:00:33 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908833.1662] manager: NetworkManager state is now CONNECTED_GLOBAL
+Nov  9 09:00:33 hbarbi-HP-Pavilion-15-Notebook-PC whoopsie[946]: [09:00:33] The default IPv4 route is: /org/freedesktop/NetworkManager/ActiveConnection/1
+Nov  9 09:00:33 hbarbi-HP-Pavilion-15-Notebook-PC whoopsie[946]: [09:00:33] Not a paid data plan: /org/freedesktop/NetworkManager/ActiveConnection/1
+Nov  9 09:00:33 hbarbi-HP-Pavilion-15-Notebook-PC whoopsie[946]: [09:00:33] Found usable connection: /org/freedesktop/NetworkManager/ActiveConnection/1
+Nov  9 09:00:43 hbarbi-HP-Pavilion-15-Notebook-PC systemd[1]: NetworkManager-dispatcher.service: Succeeded.
+Nov  9 09:01:37 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908894.6804] agent-manager: agent[acf8504bd98cc142,:1.86/org.gnome.Shell.NetworkAgent/1000]: agent registered
+Nov  9 09:01:48 hbarbi-HP-Pavilion-15-Notebook-PC kernel: [  140.006744] audit: type=1107 audit(1604908908.104:47): pid=701 uid=103 auid=4294967295 ses=4294967295 msg='apparmor="DENIED" operation="dbus_method_call"  bus="system" path="/org/freedesktop/NetworkManager" interface="org.freedesktop.DBus.Properties" member="GetAll" mask="send" name=":1.17" pid=1964 label="snap.snap-store.ubuntu-software" peer_pid=702 peer_label="unconfined"
+Nov  9 09:01:53 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908913.1368] manager: sleep: sleep requested (sleeping: no  enabled: yes)
+Nov  9 09:01:53 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908913.1369] device (eno1): state change: unavailable -> unmanaged (reason 'sleeping', sys-iface-state: 'managed')
+Nov  9 09:01:53 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604908913.1603] manager: NetworkManager state is now ASLEEP
+Nov  9 09:56:37 hbarbi-HP-Pavilion-15-Notebook-PC whoopsie[946]: [09:56:36] Could not determine if /org/freedesktop/NetworkManager/ActiveConnection/1 is a default route:
+Nov  9 09:56:37 hbarbi-HP-Pavilion-15-Notebook-PC whoopsie[946]: [09:56:36] GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.DBus.Properties” on object at path /org/freedesktop/NetworkManager/ActiveConnection/1
+Nov  9 09:56:37 hbarbi-HP-Pavilion-15-Notebook-PC whoopsie[946]: [09:56:36] Could not determine if /org/freedesktop/NetworkManager/ActiveConnection/1 is a default route:
+Nov  9 09:56:37 hbarbi-HP-Pavilion-15-Notebook-PC whoopsie[946]: [09:56:36] GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.DBus.Properties” on object at path /org/freedesktop/NetworkManager/ActiveConnection/1
+Nov  9 09:56:37 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912193.6304] dhcp4 (wlo1): state changed bound -> expire
+Nov  9 09:56:37 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912193.6305] device (wlo1): DHCPv4: trying to acquire a new lease within 90 seconds
+Nov  9 09:56:37 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912193.6565] device (wlo1): supplicant interface state: completed -> disconnected
+Nov  9 09:56:37 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912193.7371] device (wlo1): supplicant interface state: disconnected -> scanning
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912194.8062] device (wlo1): supplicant interface state: scanning -> associating
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912194.9405] device (wlo1): supplicant interface state: associating -> 4-way handshake
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912194.9499] device (wlo1): supplicant interface state: 4-way handshake -> completed
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912196.4659] manager: sleep: wake requested (sleeping: yes  enabled: yes)
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912196.4660] device (wlo1): state change: activated -> unmanaged (reason 'sleeping', sys-iface-state: 'managed')
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912196.4965] dhcp4 (wlo1): canceled DHCP transaction
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912196.4966] dhcp4 (wlo1): state changed expire -> done
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912196.5002] manager: NetworkManager state is now CONNECTED_GLOBAL
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC dbus-daemon[701]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.17' (uid=0 pid=702 comm="/usr/sbin/NetworkManager --no-daemon " label="unconfined")
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912196.5097] manager: NetworkManager state is now DISCONNECTED
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912196.5273] device (eno1): state change: unmanaged -> unavailable (reason 'managed', sys-iface-state: 'managed')
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912196.6324] device (wlo1): state change: unmanaged -> unavailable (reason 'managed', sys-iface-state: 'managed')
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912197.0646] sup-iface[0x55fd0a0409f0,wlo1]: supports 1 scan SSIDs
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912197.0662] device (wlo1): supplicant interface state: starting -> ready
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912197.0663] device (wlo1): state change: unavailable -> disconnected (reason 'supplicant-available', sys-iface-state: 'managed')
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912198.1525] policy: auto-activating connection 'FLOW academy' (94324112-aaff-4fc9-8b6f-562bd9fdd850)
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912198.1532] device (wlo1): Activation: starting connection 'FLOW academy' (94324112-aaff-4fc9-8b6f-562bd9fdd850)
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912198.1534] device (wlo1): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912198.1541] manager: NetworkManager state is now CONNECTING
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912198.1551] device (wlo1): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912198.1556] device (wlo1): Activation: (wifi) access point 'FLOW academy' has security, but secrets are required.
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912198.1557] device (wlo1): state change: config -> need-auth (reason 'none', sys-iface-state: 'managed')
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912198.1597] device (wlo1): state change: need-auth -> prepare (reason 'none', sys-iface-state: 'managed')
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912198.1604] device (wlo1): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912198.1609] device (wlo1): Activation: (wifi) connection 'FLOW academy' has security, and secrets exist.  No new secrets needed.
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912198.1610] Config: added 'ssid' value 'FLOW academy'
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912198.1610] Config: added 'scan_ssid' value '1'
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912198.1610] Config: added 'bgscan' value 'simple:30:-70:86400'
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912198.1611] Config: added 'key_mgmt' value 'WPA-PSK WPA-PSK-SHA256'
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912198.1611] Config: added 'auth_alg' value 'OPEN'
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912198.1611] Config: added 'psk' value '<hidden>'
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912198.1930] device (wlo1): supplicant interface state: ready -> associating
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912198.2649] device (wlo1): supplicant interface state: associating -> 4-way handshake
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912198.2733] device (wlo1): supplicant interface state: 4-way handshake -> completed
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912198.2734] device (wlo1): Activation: (wifi) Stage 2 of 5 (Device Configure) successful. Connected to wireless network "FLOW academy"
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912198.2737] device (wlo1): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912198.2748] dhcp4 (wlo1): activation: beginning transaction (timeout in 45 seconds)
+Nov  9 09:56:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912198.3313] dhcp4 (wlo1): state changed unknown -> expire
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.0866] dhcp4 (wlo1): option dhcp_lease_time      => '600'
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.0867] dhcp4 (wlo1): option domain_name_servers  => '192.168.0.1'
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.0868] dhcp4 (wlo1): option expiry               => '1604912798'
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.0868] dhcp4 (wlo1): option ip_address           => '192.168.5.76'
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.0868] dhcp4 (wlo1): option next_server          => '192.168.5.1'
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.0868] dhcp4 (wlo1): option requested_broadcast_address => '1'
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.0868] dhcp4 (wlo1): option requested_domain_name => '1'
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.0869] dhcp4 (wlo1): option requested_domain_name_servers => '1'
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.0869] dhcp4 (wlo1): option requested_domain_search => '1'
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.0869] dhcp4 (wlo1): option requested_host_name  => '1'
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.0870] dhcp4 (wlo1): option requested_interface_mtu => '1'
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.0870] dhcp4 (wlo1): option requested_ms_classless_static_routes => '1'
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.0870] dhcp4 (wlo1): option requested_nis_domain => '1'
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.0871] dhcp4 (wlo1): option requested_nis_servers => '1'
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.0871] dhcp4 (wlo1): option requested_ntp_servers => '1'
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.0871] dhcp4 (wlo1): option requested_rfc3442_classless_static_routes => '1'
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.0872] dhcp4 (wlo1): option requested_root_path  => '1'
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.0872] dhcp4 (wlo1): option requested_routers    => '1'
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.0872] dhcp4 (wlo1): option requested_static_routes => '1'
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.0873] dhcp4 (wlo1): option requested_subnet_mask => '1'
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.0873] dhcp4 (wlo1): option requested_time_offset => '1'
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.0873] dhcp4 (wlo1): option requested_wpad       => '1'
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.0873] dhcp4 (wlo1): option routers              => '192.168.5.1'
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.0874] dhcp4 (wlo1): option subnet_mask          => '255.255.255.0'
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.0874] dhcp4 (wlo1): state changed expire -> bound
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.0988] device (wlo1): state change: ip-config -> ip-check (reason 'none', sys-iface-state: 'managed')
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.1070] device (wlo1): state change: ip-check -> secondaries (reason 'none', sys-iface-state: 'managed')
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.1076] device (wlo1): state change: secondaries -> activated (reason 'none', sys-iface-state: 'managed')
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.1087] manager: NetworkManager state is now CONNECTED_LOCAL
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.1129] manager: NetworkManager state is now CONNECTED_SITE
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.1131] policy: set 'FLOW academy' (wlo1) as default for IPv4 routing and DNS
+Nov  9 09:56:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912199.1140] device (wlo1): Activation: successful, device activated.
+Nov  9 09:56:40 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912200.4127] manager: NetworkManager state is now CONNECTED_GLOBAL
+Nov  9 09:56:40 hbarbi-HP-Pavilion-15-Notebook-PC whoopsie[946]: [09:56:40] The default IPv4 route is: /org/freedesktop/NetworkManager/ActiveConnection/2
+Nov  9 09:56:40 hbarbi-HP-Pavilion-15-Notebook-PC whoopsie[946]: [09:56:40] Not a paid data plan: /org/freedesktop/NetworkManager/ActiveConnection/2
+Nov  9 09:56:40 hbarbi-HP-Pavilion-15-Notebook-PC whoopsie[946]: [09:56:40] Found usable connection: /org/freedesktop/NetworkManager/ActiveConnection/2
+Nov  9 09:56:50 hbarbi-HP-Pavilion-15-Notebook-PC systemd[1]: NetworkManager-dispatcher.service: Succeeded.
+Nov  9 09:57:21 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912241.1623] agent-manager: agent[1e723a27f83054f1,:1.86/org.gnome.Shell.NetworkAgent/1000]: agent registered
+Nov  9 10:00:21 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912421.5917] manager: sleep: sleep requested (sleeping: no  enabled: yes)
+Nov  9 10:00:21 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912421.5918] device (eno1): state change: unavailable -> unmanaged (reason 'sleeping', sys-iface-state: 'managed')
+Nov  9 10:00:21 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604912421.6101] manager: NetworkManager state is now ASLEEP
+Nov  9 10:16:35 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913395.6890] dhcp4 (wlo1): state changed bound -> expire
+Nov  9 10:16:35 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913395.6891] device (wlo1): DHCPv4: trying to acquire a new lease within 90 seconds
+Nov  9 10:16:35 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913395.6982] device (wlo1): supplicant interface state: completed -> disconnected
+Nov  9 10:16:37 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913395.7905] device (wlo1): supplicant interface state: disconnected -> scanning
+Nov  9 10:16:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913396.8494] device (wlo1): supplicant interface state: scanning -> associating
+Nov  9 10:16:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913396.9871] device (wlo1): supplicant interface state: associating -> 4-way handshake
+Nov  9 10:16:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913397.0014] device (wlo1): supplicant interface state: 4-way handshake -> completed
+Nov  9 10:16:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913398.3691] manager: sleep: wake requested (sleeping: yes  enabled: yes)
+Nov  9 10:16:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913398.3692] device (wlo1): state change: activated -> unmanaged (reason 'sleeping', sys-iface-state: 'managed')
+Nov  9 10:16:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913398.3890] dhcp4 (wlo1): canceled DHCP transaction
+Nov  9 10:16:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913398.3891] dhcp4 (wlo1): state changed expire -> done
+Nov  9 10:16:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913398.3921] manager: NetworkManager state is now CONNECTED_GLOBAL
+Nov  9 10:16:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913398.3998] manager: NetworkManager state is now DISCONNECTED
+Nov  9 10:16:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913398.4060] device (eno1): state change: unmanaged -> unavailable (reason 'managed', sys-iface-state: 'managed')
+Nov  9 10:16:38 hbarbi-HP-Pavilion-15-Notebook-PC dbus-daemon[701]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.17' (uid=0 pid=702 comm="/usr/sbin/NetworkManager --no-daemon " label="unconfined")
+Nov  9 10:16:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913398.5160] device (wlo1): state change: unmanaged -> unavailable (reason 'managed', sys-iface-state: 'managed')
+Nov  9 10:16:38 hbarbi-HP-Pavilion-15-Notebook-PC whoopsie[946]: [10:16:38] Could not determine if /org/freedesktop/NetworkManager/ActiveConnection/2 is a default route:
+Nov  9 10:16:38 hbarbi-HP-Pavilion-15-Notebook-PC whoopsie[946]: [10:16:38] GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.DBus.Properties” on object at path /org/freedesktop/NetworkManager/ActiveConnection/2
+Nov  9 10:16:38 hbarbi-HP-Pavilion-15-Notebook-PC whoopsie[946]: [10:16:38] Could not determine if /org/freedesktop/NetworkManager/ActiveConnection/2 is a default route:
+Nov  9 10:16:38 hbarbi-HP-Pavilion-15-Notebook-PC whoopsie[946]: [10:16:38] GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.DBus.Properties” on object at path /org/freedesktop/NetworkManager/ActiveConnection/2
+Nov  9 10:16:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913398.5957] sup-iface[0x55fd0a040ae0,wlo1]: supports 1 scan SSIDs
+Nov  9 10:16:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913398.5974] device (wlo1): supplicant interface state: starting -> ready
+Nov  9 10:16:38 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913398.5975] device (wlo1): state change: unavailable -> disconnected (reason 'supplicant-available', sys-iface-state: 'managed')
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.7321] policy: auto-activating connection 'FLOW academy' (94324112-aaff-4fc9-8b6f-562bd9fdd850)
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.7330] device (wlo1): Activation: starting connection 'FLOW academy' (94324112-aaff-4fc9-8b6f-562bd9fdd850)
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.7332] device (wlo1): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.7339] manager: NetworkManager state is now CONNECTING
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.7348] device (wlo1): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.7354] device (wlo1): Activation: (wifi) access point 'FLOW academy' has security, but secrets are required.
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.7354] device (wlo1): state change: config -> need-auth (reason 'none', sys-iface-state: 'managed')
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.7390] device (wlo1): state change: need-auth -> prepare (reason 'none', sys-iface-state: 'managed')
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.7396] device (wlo1): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.7402] device (wlo1): Activation: (wifi) connection 'FLOW academy' has security, and secrets exist.  No new secrets needed.
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.7403] Config: added 'ssid' value 'FLOW academy'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.7403] Config: added 'scan_ssid' value '1'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.7403] Config: added 'bgscan' value 'simple:30:-70:86400'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.7403] Config: added 'key_mgmt' value 'WPA-PSK WPA-PSK-SHA256'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.7403] Config: added 'auth_alg' value 'OPEN'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.7403] Config: added 'psk' value '<hidden>'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.7686] device (wlo1): supplicant interface state: ready -> associating
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.8329] device (wlo1): supplicant interface state: associating -> 4-way handshake
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.8422] device (wlo1): supplicant interface state: 4-way handshake -> completed
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.8423] device (wlo1): Activation: (wifi) Stage 2 of 5 (Device Configure) successful. Connected to wireless network "FLOW academy"
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.8429] device (wlo1): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.8439] dhcp4 (wlo1): activation: beginning transaction (timeout in 45 seconds)
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9150] dhcp4 (wlo1): option dhcp_lease_time      => '600'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9151] dhcp4 (wlo1): option domain_name_servers  => '192.168.0.1'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9151] dhcp4 (wlo1): option expiry               => '1604913999'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9151] dhcp4 (wlo1): option ip_address           => '192.168.5.76'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9151] dhcp4 (wlo1): option next_server          => '192.168.5.1'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9152] dhcp4 (wlo1): option requested_broadcast_address => '1'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9152] dhcp4 (wlo1): option requested_domain_name => '1'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9152] dhcp4 (wlo1): option requested_domain_name_servers => '1'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9152] dhcp4 (wlo1): option requested_domain_search => '1'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9152] dhcp4 (wlo1): option requested_host_name  => '1'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9152] dhcp4 (wlo1): option requested_interface_mtu => '1'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9153] dhcp4 (wlo1): option requested_ms_classless_static_routes => '1'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9153] dhcp4 (wlo1): option requested_nis_domain => '1'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9153] dhcp4 (wlo1): option requested_nis_servers => '1'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9153] dhcp4 (wlo1): option requested_ntp_servers => '1'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9154] dhcp4 (wlo1): option requested_rfc3442_classless_static_routes => '1'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9154] dhcp4 (wlo1): option requested_root_path  => '1'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9154] dhcp4 (wlo1): option requested_routers    => '1'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9154] dhcp4 (wlo1): option requested_static_routes => '1'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9154] dhcp4 (wlo1): option requested_subnet_mask => '1'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9154] dhcp4 (wlo1): option requested_time_offset => '1'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9155] dhcp4 (wlo1): option requested_wpad       => '1'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9155] dhcp4 (wlo1): option routers              => '192.168.5.1'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9155] dhcp4 (wlo1): option subnet_mask          => '255.255.255.0'
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9155] dhcp4 (wlo1): state changed unknown -> bound
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9297] device (wlo1): state change: ip-config -> ip-check (reason 'none', sys-iface-state: 'managed')
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9362] device (wlo1): state change: ip-check -> secondaries (reason 'none', sys-iface-state: 'managed')
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9372] device (wlo1): state change: secondaries -> activated (reason 'none', sys-iface-state: 'managed')
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9387] manager: NetworkManager state is now CONNECTED_LOCAL
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9440] manager: NetworkManager state is now CONNECTED_SITE
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9444] policy: set 'FLOW academy' (wlo1) as default for IPv4 routing and DNS
+Nov  9 10:16:39 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913399.9460] device (wlo1): Activation: successful, device activated.
+Nov  9 10:16:40 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913400.3870] manager: NetworkManager state is now CONNECTED_GLOBAL
+Nov  9 10:16:40 hbarbi-HP-Pavilion-15-Notebook-PC whoopsie[946]: [10:16:40] The default IPv4 route is: /org/freedesktop/NetworkManager/ActiveConnection/3
+Nov  9 10:16:40 hbarbi-HP-Pavilion-15-Notebook-PC whoopsie[946]: [10:16:40] Not a paid data plan: /org/freedesktop/NetworkManager/ActiveConnection/3
+Nov  9 10:16:40 hbarbi-HP-Pavilion-15-Notebook-PC whoopsie[946]: [10:16:40] Found usable connection: /org/freedesktop/NetworkManager/ActiveConnection/3
+Nov  9 10:16:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913402.6796] agent-manager: agent[144687f812b7f211,:1.86/org.gnome.Shell.NetworkAgent/1000]: agent registered
+Nov  9 10:16:50 hbarbi-HP-Pavilion-15-Notebook-PC systemd[1]: NetworkManager-dispatcher.service: Succeeded.
+Nov  9 10:20:18 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913618.5685] device (wlo1): supplicant interface state: completed -> associating
+Nov  9 10:20:18 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913618.6775] device (wlo1): supplicant interface state: associating -> 4-way handshake
+Nov  9 10:20:18 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913618.6828] device (wlo1): supplicant interface state: 4-way handshake -> completed
+Nov  9 10:20:49 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913649.7531] device (wlo1): supplicant interface state: completed -> associating
+Nov  9 10:20:49 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913649.8587] device (wlo1): supplicant interface state: associating -> completed
+Nov  9 10:22:01 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913721.7445] manager: NetworkManager state is now CONNECTED_SITE
+Nov  9 10:22:01 hbarbi-HP-Pavilion-15-Notebook-PC dbus-daemon[701]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.17' (uid=0 pid=702 comm="/usr/sbin/NetworkManager --no-daemon " label="unconfined")
+Nov  9 10:22:03 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913723.9088] manager: NetworkManager state is now CONNECTED_GLOBAL
+Nov  9 10:22:08 hbarbi-HP-Pavilion-15-Notebook-PC whoopsie[946]: [10:22:08] The default IPv4 route is: /org/freedesktop/NetworkManager/ActiveConnection/3
+Nov  9 10:22:08 hbarbi-HP-Pavilion-15-Notebook-PC whoopsie[946]: [10:22:08] Not a paid data plan: /org/freedesktop/NetworkManager/ActiveConnection/3
+Nov  9 10:22:08 hbarbi-HP-Pavilion-15-Notebook-PC whoopsie[946]: [10:22:08] Found usable connection: /org/freedesktop/NetworkManager/ActiveConnection/3
+Nov  9 10:22:13 hbarbi-HP-Pavilion-15-Notebook-PC systemd[1]: NetworkManager-dispatcher.service: Succeeded.
+Nov  9 10:23:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913822.8259] dhcp4 (wlo1): option dhcp_lease_time      => '600'
+Nov  9 10:23:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913822.8260] dhcp4 (wlo1): option domain_name_servers  => '192.168.0.1'
+Nov  9 10:23:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913822.8260] dhcp4 (wlo1): option expiry               => '1604914422'
+Nov  9 10:23:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913822.8260] dhcp4 (wlo1): option ip_address           => '192.168.5.76'
+Nov  9 10:23:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913822.8260] dhcp4 (wlo1): option next_server          => '192.168.5.1'
+Nov  9 10:23:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913822.8260] dhcp4 (wlo1): option requested_broadcast_address => '1'
+Nov  9 10:23:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913822.8261] dhcp4 (wlo1): option requested_domain_name => '1'
+Nov  9 10:23:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913822.8261] dhcp4 (wlo1): option requested_domain_name_servers => '1'
+Nov  9 10:23:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913822.8261] dhcp4 (wlo1): option requested_domain_search => '1'
+Nov  9 10:23:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913822.8261] dhcp4 (wlo1): option requested_host_name  => '1'
+Nov  9 10:23:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913822.8261] dhcp4 (wlo1): option requested_interface_mtu => '1'
+Nov  9 10:23:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913822.8261] dhcp4 (wlo1): option requested_ms_classless_static_routes => '1'
+Nov  9 10:23:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913822.8261] dhcp4 (wlo1): option requested_nis_domain => '1'
+Nov  9 10:23:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913822.8262] dhcp4 (wlo1): option requested_nis_servers => '1'
+Nov  9 10:23:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913822.8262] dhcp4 (wlo1): option requested_ntp_servers => '1'
+Nov  9 10:23:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913822.8262] dhcp4 (wlo1): option requested_rfc3442_classless_static_routes => '1'
+Nov  9 10:23:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913822.8262] dhcp4 (wlo1): option requested_root_path  => '1'
+Nov  9 10:23:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913822.8262] dhcp4 (wlo1): option requested_routers    => '1'
+Nov  9 10:23:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913822.8262] dhcp4 (wlo1): option requested_static_routes => '1'
+Nov  9 10:23:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913822.8263] dhcp4 (wlo1): option requested_subnet_mask => '1'
+Nov  9 10:23:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913822.8263] dhcp4 (wlo1): option requested_time_offset => '1'
+Nov  9 10:23:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913822.8263] dhcp4 (wlo1): option requested_wpad       => '1'
+Nov  9 10:23:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913822.8263] dhcp4 (wlo1): option routers              => '192.168.5.1'
+Nov  9 10:23:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913822.8263] dhcp4 (wlo1): option subnet_mask          => '255.255.255.0'
+Nov  9 10:23:42 hbarbi-HP-Pavilion-15-Notebook-PC dbus-daemon[701]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.17' (uid=0 pid=702 comm="/usr/sbin/NetworkManager --no-daemon " label="unconfined")
+Nov  9 10:23:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604913822.8263] dhcp4 (wlo1): state changed bound -> extended
+Nov  9 10:23:52 hbarbi-HP-Pavilion-15-Notebook-PC systemd[1]: NetworkManager-dispatcher.service: Succeeded.
+Nov  9 10:28:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914122.8247] dhcp4 (wlo1): option dhcp_lease_time      => '600'
+Nov  9 10:28:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914122.8248] dhcp4 (wlo1): option domain_name_servers  => '192.168.0.1'
+Nov  9 10:28:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914122.8248] dhcp4 (wlo1): option expiry               => '1604914722'
+Nov  9 10:28:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914122.8248] dhcp4 (wlo1): option ip_address           => '192.168.5.76'
+Nov  9 10:28:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914122.8248] dhcp4 (wlo1): option next_server          => '192.168.5.1'
+Nov  9 10:28:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914122.8249] dhcp4 (wlo1): option requested_broadcast_address => '1'
+Nov  9 10:28:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914122.8249] dhcp4 (wlo1): option requested_domain_name => '1'
+Nov  9 10:28:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914122.8249] dhcp4 (wlo1): option requested_domain_name_servers => '1'
+Nov  9 10:28:42 hbarbi-HP-Pavilion-15-Notebook-PC dbus-daemon[701]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.17' (uid=0 pid=702 comm="/usr/sbin/NetworkManager --no-daemon " label="unconfined")
+Nov  9 10:28:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914122.8249] dhcp4 (wlo1): option requested_domain_search => '1'
+Nov  9 10:28:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914122.8249] dhcp4 (wlo1): option requested_host_name  => '1'
+Nov  9 10:28:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914122.8250] dhcp4 (wlo1): option requested_interface_mtu => '1'
+Nov  9 10:28:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914122.8250] dhcp4 (wlo1): option requested_ms_classless_static_routes => '1'
+Nov  9 10:28:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914122.8250] dhcp4 (wlo1): option requested_nis_domain => '1'
+Nov  9 10:28:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914122.8251] dhcp4 (wlo1): option requested_nis_servers => '1'
+Nov  9 10:28:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914122.8251] dhcp4 (wlo1): option requested_ntp_servers => '1'
+Nov  9 10:28:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914122.8251] dhcp4 (wlo1): option requested_rfc3442_classless_static_routes => '1'
+Nov  9 10:28:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914122.8251] dhcp4 (wlo1): option requested_root_path  => '1'
+Nov  9 10:28:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914122.8252] dhcp4 (wlo1): option requested_routers    => '1'
+Nov  9 10:28:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914122.8252] dhcp4 (wlo1): option requested_static_routes => '1'
+Nov  9 10:28:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914122.8252] dhcp4 (wlo1): option requested_subnet_mask => '1'
+Nov  9 10:28:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914122.8252] dhcp4 (wlo1): option requested_time_offset => '1'
+Nov  9 10:28:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914122.8252] dhcp4 (wlo1): option requested_wpad       => '1'
+Nov  9 10:28:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914122.8252] dhcp4 (wlo1): option routers              => '192.168.5.1'
+Nov  9 10:28:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914122.8253] dhcp4 (wlo1): option subnet_mask          => '255.255.255.0'
+Nov  9 10:28:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914122.8253] dhcp4 (wlo1): state changed extended -> extended
+Nov  9 10:28:52 hbarbi-HP-Pavilion-15-Notebook-PC systemd[1]: NetworkManager-dispatcher.service: Succeeded.
+Nov  9 10:34:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914482.8667] dhcp4 (wlo1): option dhcp_lease_time      => '600'
+Nov  9 10:34:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914482.8668] dhcp4 (wlo1): option domain_name_servers  => '192.168.0.1'
+Nov  9 10:34:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914482.8668] dhcp4 (wlo1): option expiry               => '1604915082'
+Nov  9 10:34:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914482.8668] dhcp4 (wlo1): option ip_address           => '192.168.5.76'
+Nov  9 10:34:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914482.8669] dhcp4 (wlo1): option next_server          => '192.168.5.1'
+Nov  9 10:34:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914482.8669] dhcp4 (wlo1): option requested_broadcast_address => '1'
+Nov  9 10:34:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914482.8669] dhcp4 (wlo1): option requested_domain_name => '1'
+Nov  9 10:34:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914482.8669] dhcp4 (wlo1): option requested_domain_name_servers => '1'
+Nov  9 10:34:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914482.8669] dhcp4 (wlo1): option requested_domain_search => '1'
+Nov  9 10:34:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914482.8670] dhcp4 (wlo1): option requested_host_name  => '1'
+Nov  9 10:34:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914482.8670] dhcp4 (wlo1): option requested_interface_mtu => '1'
+Nov  9 10:34:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914482.8670] dhcp4 (wlo1): option requested_ms_classless_static_routes => '1'
+Nov  9 10:34:42 hbarbi-HP-Pavilion-15-Notebook-PC dbus-daemon[701]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.17' (uid=0 pid=702 comm="/usr/sbin/NetworkManager --no-daemon " label="unconfined")
+Nov  9 10:34:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914482.8670] dhcp4 (wlo1): option requested_nis_domain => '1'
+Nov  9 10:34:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914482.8670] dhcp4 (wlo1): option requested_nis_servers => '1'
+Nov  9 10:34:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914482.8670] dhcp4 (wlo1): option requested_ntp_servers => '1'
+Nov  9 10:34:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914482.8671] dhcp4 (wlo1): option requested_rfc3442_classless_static_routes => '1'
+Nov  9 10:34:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914482.8671] dhcp4 (wlo1): option requested_root_path  => '1'
+Nov  9 10:34:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914482.8671] dhcp4 (wlo1): option requested_routers    => '1'
+Nov  9 10:34:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914482.8671] dhcp4 (wlo1): option requested_static_routes => '1'
+Nov  9 10:34:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914482.8671] dhcp4 (wlo1): option requested_subnet_mask => '1'
+Nov  9 10:34:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914482.8672] dhcp4 (wlo1): option requested_time_offset => '1'
+Nov  9 10:34:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914482.8672] dhcp4 (wlo1): option requested_wpad       => '1'
+Nov  9 10:34:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914482.8672] dhcp4 (wlo1): option routers              => '192.168.5.1'
+Nov  9 10:34:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914482.8672] dhcp4 (wlo1): option subnet_mask          => '255.255.255.0'
+Nov  9 10:34:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914482.8672] dhcp4 (wlo1): state changed extended -> extended
+Nov  9 10:34:52 hbarbi-HP-Pavilion-15-Notebook-PC systemd[1]: NetworkManager-dispatcher.service: Succeeded.
+Nov  9 10:39:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914782.7645] dhcp4 (wlo1): option dhcp_lease_time      => '600'
+Nov  9 10:39:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914782.7646] dhcp4 (wlo1): option domain_name_servers  => '192.168.0.1'
+Nov  9 10:39:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914782.7646] dhcp4 (wlo1): option expiry               => '1604915382'
+Nov  9 10:39:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914782.7646] dhcp4 (wlo1): option ip_address           => '192.168.5.76'
+Nov  9 10:39:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914782.7646] dhcp4 (wlo1): option next_server          => '192.168.5.1'
+Nov  9 10:39:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914782.7647] dhcp4 (wlo1): option requested_broadcast_address => '1'
+Nov  9 10:39:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914782.7647] dhcp4 (wlo1): option requested_domain_name => '1'
+Nov  9 10:39:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914782.7647] dhcp4 (wlo1): option requested_domain_name_servers => '1'
+Nov  9 10:39:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914782.7647] dhcp4 (wlo1): option requested_domain_search => '1'
+Nov  9 10:39:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914782.7647] dhcp4 (wlo1): option requested_host_name  => '1'
+Nov  9 10:39:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914782.7647] dhcp4 (wlo1): option requested_interface_mtu => '1'
+Nov  9 10:39:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914782.7648] dhcp4 (wlo1): option requested_ms_classless_static_routes => '1'
+Nov  9 10:39:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914782.7648] dhcp4 (wlo1): option requested_nis_domain => '1'
+Nov  9 10:39:42 hbarbi-HP-Pavilion-15-Notebook-PC dbus-daemon[701]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.17' (uid=0 pid=702 comm="/usr/sbin/NetworkManager --no-daemon " label="unconfined")
+Nov  9 10:39:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914782.7648] dhcp4 (wlo1): option requested_nis_servers => '1'
+Nov  9 10:39:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914782.7648] dhcp4 (wlo1): option requested_ntp_servers => '1'
+Nov  9 10:39:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914782.7648] dhcp4 (wlo1): option requested_rfc3442_classless_static_routes => '1'
+Nov  9 10:39:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914782.7649] dhcp4 (wlo1): option requested_root_path  => '1'
+Nov  9 10:39:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914782.7649] dhcp4 (wlo1): option requested_routers    => '1'
+Nov  9 10:39:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914782.7649] dhcp4 (wlo1): option requested_static_routes => '1'
+Nov  9 10:39:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914782.7649] dhcp4 (wlo1): option requested_subnet_mask => '1'
+Nov  9 10:39:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914782.7649] dhcp4 (wlo1): option requested_time_offset => '1'
+Nov  9 10:39:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914782.7649] dhcp4 (wlo1): option requested_wpad       => '1'
+Nov  9 10:39:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914782.7650] dhcp4 (wlo1): option routers              => '192.168.5.1'
+Nov  9 10:39:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914782.7650] dhcp4 (wlo1): option subnet_mask          => '255.255.255.0'
+Nov  9 10:39:42 hbarbi-HP-Pavilion-15-Notebook-PC NetworkManager[702]: <info>  [1604914782.7650] dhcp4 (wlo1): state changed extended -> extended
+Nov  9 10:39:52 hbarbi-HP-Pavilion-15-Notebook-PC systemd[1]: NetworkManager-dispatcher.service: Succeeded.
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~/HegedusBarbi/szakasszaro$ touch HegedusBarbara_history.txt
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~/HegedusBarbi/szakasszaro$ nano HegedusBarbara_history.txt 
+h-barbi@hbarbi-HP-Pavilion-15-Notebook-PC:~/HegedusBarbi/szakasszaro$ 
